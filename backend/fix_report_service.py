@@ -1,4 +1,4 @@
-with open('app/services/report_service.py', 'r') as f:
+with open('app/packages/reportes_administracion/services/report_service.py', 'r') as f:
     content = f.read()
 
 # Fix the indentation error in the query block
@@ -17,6 +17,6 @@ content = content.replace(
         )
         if branch_id:''')
 
-with open('app/services/report_service.py', 'w') as f:
+with open('app/packages/reportes_administracion/services/report_service.py', 'w') as f:
     f.write(content)
 print('Fixed')

@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends
 from app.core.dependencies import CurrentUser, DbSession, require_roles
 from app.models.user import Employee
 from app.schemas.reception import ReceptionCreate, ReceptionFullRead
-from app.services.reception_service import reception_service
+from app.packages.ventas_pagos_inventario.services.reception_service import reception_service
 
 router = APIRouter(prefix="/receptions", tags=["receptions"])
 

@@ -4,8 +4,8 @@ from app.core.database import SessionLocal
 from app.models.inventory import Inventory
 from app.models.movement import InventoryMovement, InventoryMovementType
 from app.models.user import Branch, Employee
-from app.services.notification_service import notification_service
-from app.services.stock_locking import lock_stock, stock_transaction
+from app.packages.autenticacion_usuarios.services.notification_service import notification_service
+from app.packages.ventas_pagos_inventario.services.stock_locking import lock_stock, stock_transaction
 
 logger = logging.getLogger(__name__)
 

@@ -74,7 +74,7 @@ class VerificationService:
                     payment.sale.status = "PAID"
                     payment.sale.paid_at = datetime.now(UTC)
                     # Generate receipt
-                    from app.services.receipt_service import receipt_service
+                    from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
                     receipt_service.generate(db, payment.sale)
 
             db.commit()
@@ -113,7 +113,7 @@ class VerificationService:
                 if payment.sale:
                     payment.sale.status = "PAID"
                     payment.sale.paid_at = datetime.now(UTC)
-                    from app.services.receipt_service import receipt_service
+                    from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
                     receipt_service.generate(db, payment.sale)
 
                 db.commit()
@@ -197,7 +197,7 @@ def run_verification_tasks():
                         if payment.sale:
                             payment.sale.status = "PAID"
                             payment.sale.paid_at = datetime.now(UTC)
-                            from app.services.receipt_service import receipt_service
+                            from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
                             receipt_service.generate(db, payment.sale)
                         db.commit()
                         # Mark as completed in tracking

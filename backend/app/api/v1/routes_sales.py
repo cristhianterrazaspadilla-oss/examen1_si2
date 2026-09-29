@@ -7,8 +7,8 @@ from app.models.sales import Sale
 from app.models.user import Client, Employee
 from app.schemas.receipt import ReceiptRead
 from app.schemas.sale import SaleGenerate, SaleRead
-from app.services.receipt_service import receipt_service
-from app.services.sales_service import sales_service
+from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
+from app.packages.ventas_pagos_inventario.services.sales_service import sales_service
 
 router = APIRouter(prefix="/sales", tags=["sales"])
 

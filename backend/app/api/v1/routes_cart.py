@@ -12,9 +12,9 @@ from app.schemas.cart import CartCheckout, CartItemIn, CartPurchase, CartRead, P
 from app.schemas.payment import PaymentRead
 from app.schemas.reservation import ReservationCreate, ReservationItem, ReservationRead
 from app.schemas.sale import SaleGenerate, SaleItem, SaleRead
-from app.services.cart_service import cart_service
-from app.services.reservation_service import reservation_service
-from app.services.sales_service import sales_service
+from app.packages.reservas_compra.services.cart_service import cart_service
+from app.packages.reservas_compra.services.reservation_service import reservation_service
+from app.packages.ventas_pagos_inventario.services.sales_service import sales_service
 
 router = APIRouter(prefix="/cart", tags=["cart"])
 

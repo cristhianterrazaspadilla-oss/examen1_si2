@@ -12,7 +12,7 @@ from app.schemas.ai import (
     AIReportResponse,
     RecommendationItem,
 )
-from app.services.ai_service import ai_service
+from app.packages.inteligencia_artificial.services.ai_service import ai_service
 
 router = APIRouter(prefix="/ai", tags=["ai"])
 

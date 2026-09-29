@@ -5,7 +5,7 @@ from app.models.catalog import GarmentVariant
 from app.models.inventory import Inventory
 from app.models.movement import InventoryMovement, InventoryMovementType
 from app.schemas.inventory import InventoryAdjust
-from app.services.stock_locking import lock_stock, stock_transaction
+from app.packages.ventas_pagos_inventario.services.stock_locking import lock_stock, stock_transaction
 
 
 class InventoryService:

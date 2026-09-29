@@ -1,6 +1,7 @@
 import sys
+from pathlib import Path
 
-filepath = r"D:\Proyectos si 2\EXAMEN 1 SI2\Plataforma-inteligente_-tienda-de-ropa\backend\app\services\report_service.py"
+filepath = Path(__file__).resolve().parent / "app/packages/reportes_administracion/services/report_service.py"
 with open(filepath, "r", encoding="utf-8") as f:
     content = f.read()
 

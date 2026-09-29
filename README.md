@@ -1,5 +1,7 @@
 # FashionStore — Plataforma inteligente de tienda de ropa
 
+[Recorrer los seis paquetes UML y sus CU-01 a CU-35](PAQUETES.md).
+
 Monorepo del sistema para la materia. Plataforma omnicanal (web, móvil y punto de venta)
 para una tienda de ropa con **reservas con probador virtual**, **recomendaciones con IA**
 (embeddings + pgvector) y **pagos con pasarela** (Mock en desarrollo; PagosNet en sandbox).

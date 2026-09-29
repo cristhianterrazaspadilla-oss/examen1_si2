@@ -10,7 +10,7 @@
 | Capa | Archivos a modificar/crear |
 |------|---------------------------|
 | **Schemas** | `backend/app/schemas/product.py` — añadir `GarmentUpdate` |
-| **Service** | `backend/app/services/product_service.py` — `update()`, `delete()` |
+| **Service** | `backend/app/packages/catalogo/services/product_service.py` — `update()`, `delete()` |
 | **Routes** | `backend/app/api/v1/routes_products.py` — `GET /products` (admin), `PATCH`, `DELETE` |
 | **Tests** | `backend/tests/test_products.py` (nuevo) — 10 tests |
 | **Frontend Admin** | `frontend/src/app/features/admin/admin.component.ts` — sección Productos (crear, listar, editar, desactivar) |
@@ -36,7 +36,7 @@ class GarmentUpdate(BaseModel):
 
 ---
 
-### 2. Service (`backend/app/services/product_service.py`)
+### 2. Service (`backend/app/packages/catalogo/services/product_service.py`)
 
 **Añadir métodos a la clase `ProductService`:**
 
@@ -78,7 +78,7 @@ from app.core.dependencies import DbSession, require_roles
 from app.core.exceptions import NotFoundError, ValidationError
 from app.models.catalog import Garment
 from app.schemas.product import GarmentCreate, GarmentRead, GarmentUpdate, VariantRead
-from app.services.product_service import product_service
+from app.packages.catalogo.services.product_service import product_service
 
 router = APIRouter(prefix="/products", tags=["products"])
 
@@ -452,7 +452,7 @@ toggleActive(p: any): void {
 ## 📋 Orden de Ejecución Recomendado
 
 1. `backend/app/schemas/product.py` — añadir `GarmentUpdate`
-2. `backend/app/services/product_service.py` — `update()`, `delete()`
+2. `backend/app/packages/catalogo/services/product_service.py` — `update()`, `delete()`
 3. `backend/app/api/v1/routes_products.py` — 3 endpoints nuevos + imports
 4. `backend/tests/test_products.py` — crear archivo con 10 tests
 5. `frontend/src/app/features/admin/admin.component.ts` — sección Productos completa

@@ -1,9 +1,9 @@
 @echo off
-cd /d "D:\Proyectos si 2\EXAMEN 1 SI2\Plataforma-inteligente_-tienda-de-ropa\backend"
-"D:\Proyectos si 2\EXAMEN 1 SI2\Plataforma-inteligente_-tienda-de-ropa\backend\.venv\Scripts\python.exe" -c "
+cd /d "%~dp0"
+python -c "
 import sys
-sys.path.insert(0, r'D:\Proyectos si 2\EXAMEN 1 SI2\Plataforma-inteligente_-tienda-de-ropa\backend')
-from app.services.report_service import ReportService
+sys.path.insert(0, '.')
+from app.packages.reportes_administracion.services.report_service import ReportService
 print('Import successful')
 " > test_output.txt 2>&1
 type test_output.txt

@@ -543,7 +543,7 @@ npm run build  # Debe compilar sin errores
 | 7 | AdminCatalogConfig | features/admin/admin-catalog-config.component.ts | CU-06,08,09,10 |
 | 8 | AdminInventory | features/admin/admin-inventory.component.ts | CU-27,28,29 |
 | 9 | AdminPromotions | features/admin/admin-promotions.component.ts | CU-11 |
-| 10 | AdminReports | features/admin/admin-reports.component.ts | CU-33,34,35 |
+| 10 | AdminReports | packages/reportes_administracion/pages/admin-reports.component.ts | CU-33,34,35 |
 | 11 | AdminAIReports | features/admin/admin-ai-reports.component.ts | CU-32 |
 | 12 | StaffReservations | features/staff/staff-reservations.component.ts | CU-17,18 |
 | 13 | POS | features/pos/pos.component.ts | CU-23,24 |

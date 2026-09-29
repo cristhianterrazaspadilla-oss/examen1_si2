@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, r'D:\Proyectos si 2\EXAMEN 1 SI2\Plataforma-inteligente_-tienda-de-ropa\backend')
-with open('app/services/report_service.py', 'r') as f:
+with open('app/packages/reportes_administracion/services/report_service.py', 'r') as f:
     content = f.read()
 
 # Fix the query block
@@ -13,6 +13,6 @@ content = content.replace(
         )
         if branch_id:''')
 
-with open('app/services/report_service.py', 'w') as f:
+with open('app/packages/reportes_administracion/services/report_service.py', 'w') as f:
     f.write(content)
 print('Fixed')

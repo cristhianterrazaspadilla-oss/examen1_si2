@@ -15,11 +15,11 @@ from app.api.v1.routes_promotions import router as promotions_router
 from app.api.v1.routes_receipt import router as receipt_router
 from app.api.v1.routes_reception import router as reception_router
 from app.api.v1.routes_recommendations import router as recommendations_router
-from app.api.v1.routes_reports import router as reports_router
 from app.api.v1.routes_reservations import router as reservations_router
 from app.api.v1.routes_sales import router as sales_router
 from app.api.v1.routes_suppliers import router as suppliers_router
 from app.api.v1.routes_users import router as users_router
+from app.packages.reportes_administracion.api.routes_reports import router as reports_router
 from app.payments.api.v1.payments import router as payments_router
 
 api_router = APIRouter()

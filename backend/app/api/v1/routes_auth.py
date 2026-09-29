@@ -11,7 +11,7 @@ from app.schemas.auth import (
 )
 from app.schemas.client import ClientRegister
 from app.schemas.common import Message
-from app.services.auth_service import auth_service
+from app.packages.autenticacion_usuarios.services.auth_service import auth_service
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 

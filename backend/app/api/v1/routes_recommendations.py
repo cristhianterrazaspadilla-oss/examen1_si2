@@ -4,7 +4,7 @@ from app.core.dependencies import CurrentUser, DbSession
 from app.core.exceptions import NotFoundError
 from app.models.user import Client
 from app.schemas.recommendation import RecommendationRead
-from app.services.ai_service import ai_service
+from app.packages.inteligencia_artificial.services.ai_service import ai_service
 
 router = APIRouter(prefix="/recommendations", tags=["recommendations"])
 

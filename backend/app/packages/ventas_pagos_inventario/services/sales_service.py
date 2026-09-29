@@ -8,9 +8,9 @@ from app.models.inventory import Inventory
 from app.models.reservation import Reservation, ReservationHistory, ReservationStatus
 from app.models.sales import Sale, SaleDetail, SaleStatus
 from app.schemas.sale import SaleGenerate
-from app.services.notification_service import notification_service
-from app.services.reservation_service import reservation_service
-from app.services.stock_locking import lock_stock, stock_transaction
+from app.packages.autenticacion_usuarios.services.notification_service import notification_service
+from app.packages.reservas_compra.services.reservation_service import reservation_service
+from app.packages.ventas_pagos_inventario.services.stock_locking import lock_stock, stock_transaction
 
 
 class SalesService:

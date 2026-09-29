@@ -5,7 +5,7 @@ from sqlalchemy import or_
 from app.core.database import SessionLocal
 from app.core.exceptions import ConflictError
 from app.models.reservation import Reservation, ReservationStatus
-from app.services.reservation_service import reservation_service
+from app.packages.reservas_compra.services.reservation_service import reservation_service
 
 RESERVATION_LIFETIME_MINUTES = 30
 

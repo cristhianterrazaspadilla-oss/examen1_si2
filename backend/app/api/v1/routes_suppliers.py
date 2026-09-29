@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 
 from app.core.dependencies import DbSession, require_roles
 from app.schemas.user import SupplierCreate, SupplierRead, SupplierUpdate
-from app.services.supplier_service import supplier_service
+from app.packages.catalogo.services.supplier_service import supplier_service
 
 router = APIRouter(prefix="/suppliers", tags=["suppliers"])
 

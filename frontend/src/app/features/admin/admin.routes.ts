@@ -6,7 +6,7 @@ import { AdminCatalogConfigComponent } from './admin-catalog-config.component';
 import { AdminProductsComponent } from './admin-products.component';
 import { AdminInventoryComponent } from './admin-inventory.component';
 import { AdminReceptionComponent } from './admin-reception.component';
-import { AdminReportsComponent } from './admin-reports.component';
+import { AdminReportsComponent } from '../../packages/reportes_administracion/pages/admin-reports.component';
 import { AdminAiReportsComponent } from './admin-ai-reports.component';
 import { AdminPromotionsComponent } from './admin-promotions.component';
 

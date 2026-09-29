@@ -39,7 +39,7 @@ for p in walk_files(ROOT, 'app/**/routes_*report*.py'):
                     print(f'   {verb:<5} {path!r} -> def {node.name}')
 
 print('=== 4) test file client calls ===')
-for p in walk_files(ROOT, 'tests/*report*.py'):
+for p in walk_files(ROOT, 'tests/**/*report*.py'):
     print('###', os.path.relpath(p, ROOT))
     try:
         tree = ast.parse(open(p, encoding='utf-8', errors='replace').read())
@@ -58,7 +58,7 @@ for p in walk_files(ROOT, 'tests/*report*.py'):
                 print(f'   L{node.lineno}: client.{fa.attr}({url!r}, json={has_json})')
 
 print('=== 5) report_service.py syntax ===')
-sp = os.path.join(ROOT, 'app', 'services', 'report_service.py')
+sp = os.path.join(ROOT, 'app', 'packages', 'reportes_administracion', 'services', 'report_service.py')
 if os.path.exists(sp):
     src = open(sp, encoding='utf-8', errors='replace').read()
     try:

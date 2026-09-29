@@ -11,7 +11,7 @@ from app.schemas.promotions import (
     PromotionUpdate,
     PromotionWithGarmentsRead,
 )
-from app.services.promotion_service import promotion_service
+from app.packages.catalogo.services.promotion_service import promotion_service
 
 router = APIRouter(prefix="/promotions", tags=["promotions"])
 

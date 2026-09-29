@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, Query
 
 from app.core.dependencies import DbSession, require_roles
 from app.schemas.inventory import InventoryAdjust, InventoryMovementRead, InventoryRead
-from app.services.inventory_service import inventory_service
+from app.packages.ventas_pagos_inventario.services.inventory_service import inventory_service
 
 router = APIRouter(prefix="/inventory", tags=["inventory"])
 

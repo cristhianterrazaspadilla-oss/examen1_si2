@@ -3,7 +3,7 @@ import ast, glob, os
 ROOT = os.getcwd()
 
 print('=== A) routes_reports.py handler bodies verbatim ===')
-p = os.path.join(ROOT, 'app', 'api', 'v1', 'routes_reports.py')
+p = os.path.join(ROOT, 'app', 'packages', 'reportes_administracion', 'api', 'routes_reports.py')
 src = open(p, encoding='utf-8', errors='replace').read()
 tree = ast.parse(src)
 for node in ast.walk(tree):
@@ -14,8 +14,8 @@ for node in ast.walk(tree):
             print('   ', ln.rstrip())
         print()
 
-print('=== B) app/schemas/report.py classes+fields ===')
-p = os.path.join(ROOT, 'app', 'schemas', 'report.py')
+print('=== B) app/packages/reportes_administracion/schemas/report.py classes+fields ===')
+p = os.path.join(ROOT, 'app', 'packages', 'reportes_administracion', 'schemas', 'report.py')
 src = open(p, encoding='utf-8', errors='replace').read()
 tree = ast.parse(src)
 for node in [n for n in ast.walk(tree) if isinstance(n, ast.ClassDef)]:

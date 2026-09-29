@@ -10,7 +10,7 @@ from app.schemas.catalog import (
     CategoryRead,
 )
 from app.schemas.common import Page
-from app.services.catalog_service import catalog_service
+from app.packages.catalogo.services.catalog_service import catalog_service
 
 router = APIRouter(prefix="/catalog", tags=["catalog"])
 

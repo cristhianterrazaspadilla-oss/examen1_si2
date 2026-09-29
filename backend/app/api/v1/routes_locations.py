@@ -9,7 +9,7 @@ from app.schemas.location import (
     CityRead,
     CityUpdate,
 )
-from app.services.location_service import location_service
+from app.packages.catalogo.services.location_service import location_service
 
 router = APIRouter(prefix="/locations", tags=["locations"])
 

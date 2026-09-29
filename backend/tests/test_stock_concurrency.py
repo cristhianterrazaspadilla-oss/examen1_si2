@@ -35,10 +35,10 @@ from app.schemas.payment import PaymentConfirm
 from app.schemas.reception import ReceptionCreate
 from app.schemas.reservation import ReservationCreate
 from app.schemas.sale import SaleGenerate
-from app.services.inventory_service import inventory_service
-from app.services.reception_service import reception_service
-from app.services.reservation_service import reservation_service
-from app.services.sales_service import sales_service
+from app.packages.ventas_pagos_inventario.services.inventory_service import inventory_service
+from app.packages.ventas_pagos_inventario.services.reception_service import reception_service
+from app.packages.reservas_compra.services.reservation_service import reservation_service
+from app.packages.ventas_pagos_inventario.services.sales_service import sales_service
 from app.tasks import inventory_sync, reservation_expiry
 
 
@@ -495,7 +495,7 @@ def test_concurrent_declines_restore_once(stock_db, pending_payment_sale):
 
 
 def test_receipt_failure_rolls_back_confirmation(stock_db, pending_payment_sale, monkeypatch):
-    from app.services.receipt_service import receipt_service
+    from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
 
     engine, *_ = stock_db
     _, ref, _, _ = pending_payment_sale

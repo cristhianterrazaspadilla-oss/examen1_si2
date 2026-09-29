@@ -15,7 +15,7 @@ from app.schemas.catalog import (
     SizeCreate,
     SizeRead,
 )
-from app.services.catalog_config_service import catalog_config_service
+from app.packages.catalogo.services.catalog_config_service import catalog_config_service
 
 router = APIRouter(prefix="/catalog/options", tags=["catalog-options"])
 

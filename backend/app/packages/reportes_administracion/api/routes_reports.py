@@ -17,7 +17,7 @@ from fastapi import APIRouter, Query
 
 from app.core.dependencies import CurrentUser, DbSession
 from app.core.exceptions import ForbiddenError
-from app.schemas.report import (
+from app.packages.reportes_administracion.schemas.report import (
     AuditLogPageResponse,
     ConsolidatedResponse,
     IndicatorsRequest,
@@ -27,8 +27,8 @@ from app.schemas.report import (
     SalesByPeriodResponse,
     TopProductsResponse,
 )
-from app.services.audit_service import get_audit_service
-from app.services.report_service import get_report_service
+from app.packages.reportes_administracion.services.audit_service import get_audit_service
+from app.packages.reportes_administracion.services.report_service import get_report_service
 
 router = APIRouter(prefix="/reports", tags=["reports"])
 

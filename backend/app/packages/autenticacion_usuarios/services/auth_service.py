@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from app.core.exceptions import ForbiddenError, NotFoundError, UnauthorizedError
 from app.core.security import create_access_token, hash_password, verify_password
 from app.models.user import Client, PasswordReset, Role, User
-from app.services.notification_service import notification_service
+from app.packages.autenticacion_usuarios.services.notification_service import notification_service
 
 
 def _utcnow() -> datetime:

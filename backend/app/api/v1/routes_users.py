@@ -10,7 +10,7 @@ from app.schemas.user import (
     UserRead,
     UserUpdate,
 )
-from app.services.user_service import user_service
+from app.packages.autenticacion_usuarios.services.user_service import user_service
 
 router = APIRouter(prefix="/users", tags=["users"])
 

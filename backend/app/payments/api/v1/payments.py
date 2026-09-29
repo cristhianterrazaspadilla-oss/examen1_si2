@@ -17,9 +17,9 @@ from app.payments.adapters.static_qr_gateway import StaticQRGateway
 from app.payments.domain.service import PaymentService
 from app.payments.factory import get_payment_service
 from app.schemas.payment import PaymentConfirm, PaymentRead
-from app.services.receipt_service import receipt_service
-from app.services.sales_service import sales_service
-from app.services.stock_locking import stock_transaction
+from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
+from app.packages.ventas_pagos_inventario.services.sales_service import sales_service
+from app.packages.ventas_pagos_inventario.services.stock_locking import stock_transaction
 
 router = APIRouter(prefix="/payments", tags=["payments"])
 
@@ -419,7 +419,7 @@ async def webhook_static_qr(request: Request, db: DbSession):
         if payment.sale:
             payment.sale.status = "PAID"
             payment.sale.paid_at = datetime.now(UTC)
-            from app.services.receipt_service import receipt_service
+            from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
             receipt_service.generate(db, payment.sale)
 
         db.commit()
@@ -443,7 +443,7 @@ def qr_status(reference: str, db: DbSession):
         if payment.sale:
             payment.sale.status = "PAID"
             payment.sale.paid_at = datetime.now(UTC)
-            from app.services.receipt_service import receipt_service
+            from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
             receipt_service.generate(db, payment.sale)
         db.commit()
 

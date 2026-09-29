@@ -103,7 +103,7 @@
   - `GET /api/v1/reports/audit-log` — trazabilidad acciones (CU-34) — usa `AuditLog` model (existe en `analytics.py`)
   - `GET /api/v1/reports/consolidated` — ventas + stock consolidado por sucursal/fecha (CU-35)
 - Permisos: solo `ADMIN`
-- Tests: `tests/test_cu33_cu34_cu35_reports.py`
+- Tests: `tests/packages/reportes_administracion/test_cu33_cu34_cu35_reports.py`
 - UML: `docs/uml/ciclo3/reportes/CU-33/`, `CU-34/`, `CU-35/`
 
 ---
@@ -122,6 +122,8 @@
 
 ### Archivos a crear/modificar (resumen por paquete)
 
+La ubicación del paquete 6 se actualizó en la etapa 1 de organización. El resto de este árbol conserva el carácter de planificación del ciclo; el inventario de archivos reales está en [PAQUETES.md](PAQUETES.md).
+
 ```
 backend/
 ├── app/
@@ -135,8 +137,7 @@ backend/
 │   │   ├── payment.py            # extender (Paquete 4 - CU-25)
 │   │   ├── receipt.py            # extender (Paquete 4 - CU-26)
 │   │   ├── inventory.py          # extender (Paquete 4 - CU-27/28/29)
-│   │   ├── ai.py                 # nuevo (Paquete 5 - CU-30/31/32)
-│   │   └── report.py             # nuevo (Paquete 6 - CU-33/34/35)
+│   │   └── ai.py                 # nuevo (Paquete 5 - CU-30/31/32)
 │   ├── services/
 │   │   ├── promotion_service.py  # nuevo (Paquete 2)
 │   │   ├── history_service.py    # nuevo (Paquete 3)
@@ -145,9 +146,7 @@ backend/
 │   │   ├── inventory_service.py  # extender (Paquete 4)
 │   │   ├── reception_service.py  # extender (Paquete 4)
 │   │   ├── movement_service.py   # nuevo (Paquete 4)
-│   │   ├── ai_service.py         # extender (Paquete 5 - recommender + chat + SQL gen)
-│   │   ├── report_service.py     # nuevo (Paquete 6)
-│   │   └── audit_service.py      # nuevo (Paquete 6)
+│   │   └── ai_service.py         # extender (Paquete 5 - recommender + chat + SQL gen)
 │   ├── api/v1/
 │   │   ├── routes_promotions.py  # nuevo (Paquete 2)
 │   │   ├── routes_history.py     # nuevo (Paquete 3)
@@ -156,8 +155,13 @@ backend/
 │   │   ├── routes_inventory.py   # extender (Paquete 4)
 │   │   ├── routes_reception.py   # extender (Paquete 4)
 │   │   ├── routes_movements.py   # nuevo (Paquete 4)
-│   │   ├── routes_ai.py          # nuevo (Paquete 5)
-│   │   └── routes_reports.py     # nuevo (Paquete 6)
+│   │   └── routes_ai.py          # nuevo (Paquete 5)
+│   ├── packages/reportes_administracion/
+│   │   ├── api/routes_reports.py
+│   │   ├── services/report_service.py
+│   │   ├── services/audit_service.py
+│   │   ├── schemas/report.py
+│   │   └── schemas/reports.py
 │   └── payments/adapters/
 │       └── pagosnet_adapter.py   # nuevo (Paquete 4)
 ├── tests/
@@ -168,7 +172,7 @@ backend/
 │   ├── test_cu27_cu28_cu29_inventory.py           (Paquete 4)
 │   ├── test_cu30_cu31_ai.py                       (Paquete 5)
 │   ├── test_cu32_ai_reports.py                    (Paquete 5)
-│   └── test_cu33_cu34_cu35_reports.py             (Paquete 6)
+│   └── packages/reportes_administracion/test_cu33_cu34_cu35_reports.py
 └── alembic/versions/                              # migración para tablas nuevas/columas
 
 docs/uml/ciclo3/
