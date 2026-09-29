@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from app.core.dependencies import CurrentUser, DbSession
-from app.schemas.client import ClientProfileRead, ClientProfileUpdate
+from app.packages.autenticacion_usuarios.schemas.client import ClientProfileRead, ClientProfileUpdate
 from app.packages.autenticacion_usuarios.services.auth_service import auth_service
 
 router = APIRouter(prefix="/clients", tags=["clients"])

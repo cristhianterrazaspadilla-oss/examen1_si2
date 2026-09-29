@@ -1,24 +1,24 @@
 from fastapi import APIRouter
 
-from app.api.v1.routes_ai import router as ai_router
-from app.api.v1.routes_auth import router as auth_router
-from app.api.v1.routes_cart import router as cart_router
-from app.api.v1.routes_catalog import router as catalog_router
-from app.api.v1.routes_catalog_config import router as catalog_config_router
-from app.api.v1.routes_clients import router as clients_router
-from app.api.v1.routes_history import router as history_router
-from app.api.v1.routes_inventory import router as inventory_router
-from app.api.v1.routes_locations import router as locations_router
-from app.api.v1.routes_notifications import router as notifications_router
-from app.api.v1.routes_products import router as products_router
-from app.api.v1.routes_promotions import router as promotions_router
-from app.api.v1.routes_receipt import router as receipt_router
-from app.api.v1.routes_reception import router as reception_router
-from app.api.v1.routes_recommendations import router as recommendations_router
-from app.api.v1.routes_reservations import router as reservations_router
-from app.api.v1.routes_sales import router as sales_router
-from app.api.v1.routes_suppliers import router as suppliers_router
-from app.api.v1.routes_users import router as users_router
+from app.packages.inteligencia_artificial.api.routes_ai import router as ai_router
+from app.packages.autenticacion_usuarios.api.routes_auth import router as auth_router
+from app.packages.reservas_compra.api.routes_cart import router as cart_router
+from app.packages.catalogo.api.routes_catalog import router as catalog_router
+from app.packages.catalogo.api.routes_catalog_config import router as catalog_config_router
+from app.packages.autenticacion_usuarios.api.routes_clients import router as clients_router
+from app.packages.reservas_compra.api.routes_history import router as history_router
+from app.packages.ventas_pagos_inventario.api.routes_inventory import router as inventory_router
+from app.packages.catalogo.api.routes_locations import router as locations_router
+from app.packages.autenticacion_usuarios.api.routes_notifications import router as notifications_router
+from app.packages.catalogo.api.routes_products import router as products_router
+from app.packages.catalogo.api.routes_promotions import router as promotions_router
+from app.packages.ventas_pagos_inventario.api.routes_receipt import router as receipt_router
+from app.packages.ventas_pagos_inventario.api.routes_reception import router as reception_router
+from app.packages.inteligencia_artificial.api.routes_recommendations import router as recommendations_router
+from app.packages.reservas_compra.api.routes_reservations import router as reservations_router
+from app.packages.ventas_pagos_inventario.api.routes_sales import router as sales_router
+from app.packages.catalogo.api.routes_suppliers import router as suppliers_router
+from app.packages.autenticacion_usuarios.api.routes_users import router as users_router
 from app.packages.reportes_administracion.api.routes_reports import router as reports_router
 from app.payments.api.v1.payments import router as payments_router
 

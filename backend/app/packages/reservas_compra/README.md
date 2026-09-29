@@ -4,7 +4,11 @@ CU-15 a CU-22 · Plataforma: backend.
 
 [README del proyecto](../../../../README.md) · [Índice general](../../../../PAQUETES.md)
 
-Estado físico: los servicios enlazados están en este paquete o en el paquete dueño indicado. Rutas, esquemas, modelos y pruebas conservan sus ubicaciones actuales.
+Estado físico: rutas, servicios y esquemas con dueño claro están en su paquete. Los archivos mixtos o transversales, modelos ORM y pruebas conservan las ubicaciones enlazadas.
+
+**Recorrido del CU:** abra su sección abajo y siga `api/` → `services/` → `schemas/` → `app/models/` mediante los enlaces de Rutas/controladores, Servicios, Esquemas y Modelos compartidos. Estas capas existen; un CU puede compartir archivos o no tener una capa propia. Los modelos ORM reales y compartidos permanecen en `app/models/` para evitar duplicarlos o romper sus relaciones. `app/services/__init__.py` se conserva como compatibilidad de paquete; la lógica de servicios actual está en `app/packages/*/services/`.
+
+**Otras plataformas:** [web](../../../../frontend/src/app/packages/reservas_compra/README.md) · [móvil](../../../../mobile/lib/packages/reservas_compra/README.md).
 
 Los enlaces apuntan a archivos reales. La presencia de código o pruebas no significa que se hayan ejecutado ni que el CU esté completo. Un archivo enlazado desde varios CU es compartido y no está duplicado.
 
@@ -14,31 +18,31 @@ Los enlaces apuntan a archivos reales. La presencia de código o pruebas no sign
 
 [Documento UML](../../../../docs/uml/ciclo1/reservas/CU-15/CU-15.md).
 
-**Rutas/controladores:** [routes_reservations.py](../../api/v1/routes_reservations.py), [routes_cart.py](../../api/v1/routes_cart.py); **Servicios:** [reservation_service.py](services/reservation_service.py), [cart_service.py](services/cart_service.py), [stock_locking.py](../ventas_pagos_inventario/services/stock_locking.py); **Esquemas:** [reservation.py](../../schemas/reservation.py), [cart.py](../../schemas/cart.py); **Modelos compartidos:** [reservation.py](../../models/reservation.py), [inventory.py](../../models/inventory.py), [cart.py](../../models/cart.py); **Pruebas:** [test_reservations.py](../../../tests/test_reservations.py)
+**Rutas/controladores:** [routes_reservations.py](api/routes_reservations.py), [routes_cart.py](api/routes_cart.py); **Servicios:** [reservation_service.py](services/reservation_service.py), [cart_service.py](services/cart_service.py), [stock_locking.py](../ventas_pagos_inventario/services/stock_locking.py); **Esquemas:** [reservation.py](schemas/reservation.py), [cart.py](schemas/cart.py); **Modelos compartidos:** [reservation.py](../../models/reservation.py), [inventory.py](../../models/inventory.py), [cart.py](../../models/cart.py); **Pruebas:** [test_reservations.py](../../../tests/test_reservations.py)
 
 ### CU-16 — Consulta y cancelación de reservas del cliente
 
 [Documento UML](../../../../docs/uml/ciclo2/reservas/CU-16/CU-16.md).
 
-**Rutas/controladores:** [routes_reservations.py](../../api/v1/routes_reservations.py); **Servicios:** [reservation_service.py](services/reservation_service.py); **Esquemas:** [reservation.py](../../schemas/reservation.py); **Modelos compartidos:** [reservation.py](../../models/reservation.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_reservations.py](../../../tests/test_reservations.py), [test_cu16_cu18.py](../../../tests/test_cu16_cu18.py)
+**Rutas/controladores:** [routes_reservations.py](api/routes_reservations.py); **Servicios:** [reservation_service.py](services/reservation_service.py); **Esquemas:** [reservation.py](schemas/reservation.py); **Modelos compartidos:** [reservation.py](../../models/reservation.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_reservations.py](../../../tests/test_reservations.py), [test_cu16_cu18.py](../../../tests/test_cu16_cu18.py)
 
 ### CU-17 — Gestión de recepción y atención de reservas
 
 [Documento UML](../../../../docs/uml/ciclo1/reservas/CU-17/CU-17.md).
 
-**Rutas/controladores:** [routes_reservations.py](../../api/v1/routes_reservations.py); **Servicios:** [reservation_service.py](services/reservation_service.py); **Esquemas:** [reservation.py](../../schemas/reservation.py); **Modelos compartidos:** [reservation.py](../../models/reservation.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_reservations.py](../../../tests/test_reservations.py), [test_cu16_cu18.py](../../../tests/test_cu16_cu18.py)
+**Rutas/controladores:** [routes_reservations.py](api/routes_reservations.py); **Servicios:** [reservation_service.py](services/reservation_service.py); **Esquemas:** [reservation.py](schemas/reservation.py); **Modelos compartidos:** [reservation.py](../../models/reservation.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_reservations.py](../../../tests/test_reservations.py), [test_cu16_cu18.py](../../../tests/test_cu16_cu18.py)
 
 ### CU-18 — Preparación de prendas reservadas
 
 [Documento UML](../../../../docs/uml/ciclo2/reservas/CU-18/CU-18.md).
 
-**Rutas/controladores:** [routes_reservations.py](../../api/v1/routes_reservations.py); **Servicios:** [reservation_service.py](services/reservation_service.py); **Esquemas:** [reservation.py](../../schemas/reservation.py); **Modelos compartidos:** [reservation.py](../../models/reservation.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_reservations.py](../../../tests/test_reservations.py), [test_cu16_cu18.py](../../../tests/test_cu16_cu18.py)
+**Rutas/controladores:** [routes_reservations.py](api/routes_reservations.py); **Servicios:** [reservation_service.py](services/reservation_service.py); **Esquemas:** [reservation.py](schemas/reservation.py); **Modelos compartidos:** [reservation.py](../../models/reservation.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_reservations.py](../../../tests/test_reservations.py), [test_cu16_cu18.py](../../../tests/test_cu16_cu18.py)
 
 ### CU-19 — Vestidor virtual (probador AR)
 
 [Documento UML](../../../../docs/uml/ciclo2/reservas/CU-19/CU-19.md).
 
-**Rutas/controladores:** [routes_catalog.py](../../api/v1/routes_catalog.py); **Servicios:** [catalog_service.py](../catalogo/services/catalog_service.py); **Esquemas:** [catalog.py](../../schemas/catalog.py); **Modelos compartidos:** [catalog.py](../../models/catalog.py)
+**Rutas/controladores:** [routes_catalog.py](../catalogo/api/routes_catalog.py); **Servicios:** [catalog_service.py](../catalogo/services/catalog_service.py); **Esquemas:** [catalog.py](../catalogo/schemas/catalog.py); **Modelos compartidos:** [catalog.py](../../models/catalog.py)
 
 Probador localizado solo en móvil, con apoyo ar-config del backend. No se acredita aquí el alcance completo del UML ni ejecución en cámara.
 
@@ -46,27 +50,27 @@ Probador localizado solo en móvil, con apoyo ar-config del backend. No se acred
 
 [Documento UML](../../../../docs/uml/ciclo2/reservas/CU-20/CU-20.md).
 
-**Rutas/controladores:** [routes_cart.py](../../api/v1/routes_cart.py); **Servicios:** [cart_service.py](services/cart_service.py); **Esquemas:** [cart.py](../../schemas/cart.py); **Modelos compartidos:** [cart.py](../../models/cart.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_cu20_cu21.py](../../../tests/test_cu20_cu21.py)
+**Rutas/controladores:** [routes_cart.py](api/routes_cart.py); **Servicios:** [cart_service.py](services/cart_service.py); **Esquemas:** [cart.py](schemas/cart.py); **Modelos compartidos:** [cart.py](../../models/cart.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_cu20_cu21.py](../../../tests/test_cu20_cu21.py)
 
 ### CU-21 — Realizar compra en línea (web/móvil)
 
 [Documento UML](../../../../docs/uml/ciclo2/ventas-pagos-inventario/CU-21/CU-21.md).
 
-**Rutas/controladores:** [routes_cart.py](../../api/v1/routes_cart.py), [payments.py](../../payments/api/v1/payments.py); **Servicios:** [sales_service.py](../ventas_pagos_inventario/services/sales_service.py), [payment_service.py](../ventas_pagos_inventario/services/payment_service.py), [cart_service.py](services/cart_service.py), [service.py](../../payments/domain/service.py), [factory.py](../../payments/factory.py); **Esquemas:** [cart.py](../../schemas/cart.py), [sale.py](../../schemas/sale.py), [payment.py](../../schemas/payment.py); **Modelos compartidos:** [sales.py](../../models/sales.py), [cart.py](../../models/cart.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_cu20_cu21.py](../../../tests/test_cu20_cu21.py), [test_mock_checkout.py](../../../isolated_tests/test_mock_checkout.py)
+**Rutas/controladores:** [routes_cart.py](api/routes_cart.py), [payments.py](../../payments/api/v1/payments.py); **Servicios:** [sales_service.py](../ventas_pagos_inventario/services/sales_service.py), [payment_service.py](../ventas_pagos_inventario/services/payment_service.py), [cart_service.py](services/cart_service.py), [service.py](../../payments/domain/service.py), [factory.py](../../payments/factory.py); **Esquemas:** [cart.py](schemas/cart.py), [sale.py](../ventas_pagos_inventario/schemas/sale.py), [payment.py](../ventas_pagos_inventario/schemas/payment.py); **Modelos compartidos:** [sales.py](../../models/sales.py), [cart.py](../../models/cart.py), [inventory.py](../../models/inventory.py); **Pruebas:** [test_cu20_cu21.py](../../../tests/test_cu20_cu21.py), [test_mock_checkout.py](../../../isolated_tests/test_mock_checkout.py)
 
 ### CU-22 — Consultar historial de compras
 
 [Documento UML](../../../../docs/uml/ciclo3/reservas-compra/CU-22/CU-22.md).
 
-**Rutas/controladores:** [routes_history.py](../../api/v1/routes_history.py); **Servicios:** [history_service.py](services/history_service.py); **Esquemas:** [history.py](../../schemas/history.py); **Modelos compartidos:** [sales.py](../../models/sales.py), [reservation.py](../../models/reservation.py)
+**Rutas/controladores:** [routes_history.py](api/routes_history.py); **Servicios:** [history_service.py](services/history_service.py); **Esquemas:** [history.py](schemas/history.py); **Modelos compartidos:** [sales.py](../../models/sales.py), [reservation.py](../../models/reservation.py)
 
 ## Rutas/controladores
 
-- [routes_reservations.py](../../api/v1/routes_reservations.py) — CU-15, CU-16, CU-17, CU-18. Compartido por estos CU.
-- [routes_cart.py](../../api/v1/routes_cart.py) — CU-15, CU-20, CU-21. Compartido por estos CU.
-- [routes_catalog.py](../../api/v1/routes_catalog.py) — CU-19.
+- [routes_reservations.py](api/routes_reservations.py) — CU-15, CU-16, CU-17, CU-18. Compartido por estos CU.
+- [routes_cart.py](api/routes_cart.py) — CU-15, CU-20, CU-21. Compartido por estos CU.
+- [routes_catalog.py](../catalogo/api/routes_catalog.py) — CU-19.
 - [payments.py](../../payments/api/v1/payments.py) — CU-21.
-- [routes_history.py](../../api/v1/routes_history.py) — CU-22.
+- [routes_history.py](api/routes_history.py) — CU-22.
 
 ## Servicios
 
@@ -82,12 +86,12 @@ Probador localizado solo en móvil, con apoyo ar-config del backend. No se acred
 
 ## Esquemas
 
-- [reservation.py](../../schemas/reservation.py) — CU-15, CU-16, CU-17, CU-18. Compartido por estos CU.
-- [cart.py](../../schemas/cart.py) — CU-15, CU-20, CU-21. Compartido por estos CU.
-- [catalog.py](../../schemas/catalog.py) — CU-19.
-- [sale.py](../../schemas/sale.py) — CU-21.
-- [payment.py](../../schemas/payment.py) — CU-21.
-- [history.py](../../schemas/history.py) — CU-22.
+- [reservation.py](schemas/reservation.py) — CU-15, CU-16, CU-17, CU-18. Compartido por estos CU.
+- [cart.py](schemas/cart.py) — CU-15, CU-20, CU-21. Compartido por estos CU.
+- [catalog.py](../catalogo/schemas/catalog.py) — CU-19.
+- [sale.py](../ventas_pagos_inventario/schemas/sale.py) — CU-21.
+- [payment.py](../ventas_pagos_inventario/schemas/payment.py) — CU-21.
+- [history.py](schemas/history.py) — CU-22.
 
 ## Modelos compartidos
 

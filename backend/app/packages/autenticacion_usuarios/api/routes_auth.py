@@ -4,12 +4,12 @@ from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 
 from app.core.dependencies import DbSession
-from app.schemas.auth import (
+from app.packages.autenticacion_usuarios.schemas.auth import (
     ForgotPasswordRequest,
     ResetPasswordRequest,
     TokenResponse,
 )
-from app.schemas.client import ClientRegister
+from app.packages.autenticacion_usuarios.schemas.client import ClientRegister
 from app.schemas.common import Message
 from app.packages.autenticacion_usuarios.services.auth_service import auth_service
 

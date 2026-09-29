@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, Query
 
 from app.core.dependencies import DbSession, require_roles
-from app.schemas.location import (
+from app.packages.catalogo.schemas.location import (
     BranchCreate,
     BranchRead,
     BranchUpdate,

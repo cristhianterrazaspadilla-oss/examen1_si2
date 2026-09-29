@@ -47,18 +47,18 @@
 ### WS-1: Paquete 2 — Catálogo — CU-11 (Promociones) ✅ **COMPLETADO**
 **Entregables:**
 - Modelo `Promotion`, `PromotionGarment` (ya existen en `analytics.py` — completar/activar)
-- Schemas: `PromotionCreate`, `PromotionUpdate`, `PromotionRead`, `PromotionGarmentRead` en `app/schemas/promotions.py`
+- Schemas: `PromotionCreate`, `PromotionUpdate`, `PromotionRead`, `PromotionGarmentRead` en `app/packages/catalogo/schemas/promotions.py`
 - Service: `promotion_service.py` (CRUD + validación fechas/vigencia + asociación prendas)
-- Routes: `/api/v1/promotions` (CRUD admin) en `app/api/v1/routes_promotions.py`
+- Routes: `/api/v1/promotions` (CRUD admin) en `app/packages/catalogo/api/routes_promotions.py`
 - Tests: `tests/test_cu11_promotions.py` (tests integrados en suite completa)
 - UML: `docs/uml/ciclo3/gestion-catalogo/CU-11/` (sequence.puml, communication.puml, CU-11.md)
 
 ### WS-2: Paquete 3 — Reservas — CU-22 (Historial Cliente) ✅ **COMPLETADO**
 **Entregables:**
 - Aprovecha `Sale`, `Receipt`, `Reservation` existentes
-- Schema: `PurchaseHistoryRead` (unificado ventas + reservas + estado) en `app/schemas/history.py`
+- Schema: `PurchaseHistoryRead` (unificado ventas + reservas + estado) en `app/packages/reservas_compra/schemas/history.py`
 - Service: `history_service.py` — `get_client_history(client_id)` con paginación
-- Route: `GET /api/v1/history` (cliente autenticado) en `app/api/v1/routes_history.py`
+- Route: `GET /api/v1/history` (cliente autenticado) en `app/packages/reservas_compra/api/routes_history.py`
 - Tests: Integrados en suite completa (74 passed)
 - UML: `docs/uml/ciclo3/reservas-compra/CU-22/` (sequence.puml, communication.puml, CU-22.md)
 

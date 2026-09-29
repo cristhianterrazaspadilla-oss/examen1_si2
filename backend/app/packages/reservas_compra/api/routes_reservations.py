@@ -6,7 +6,7 @@ from app.core.exceptions import ForbiddenError, NotFoundError
 from app.models.catalog import Garment, GarmentVariant
 from app.models.reservation import Reservation, ReservationDetail, ReservationStatus
 from app.models.user import Client, Employee
-from app.schemas.reservation import ReservationAction, ReservationCreate, ReservationRead
+from app.packages.reservas_compra.schemas.reservation import ReservationAction, ReservationCreate, ReservationRead
 from app.packages.reservas_compra.services.reservation_service import reservation_service
 
 router = APIRouter(prefix="/reservations", tags=["reservations"])

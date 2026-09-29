@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 
 from app.core.dependencies import DbSession, require_roles
-from app.schemas.catalog import (
+from app.packages.catalogo.schemas.catalog import (
     CategoryCreate,
     CategoryRead,
     CategoryUpdate,

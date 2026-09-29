@@ -4,7 +4,7 @@ from fastapi import APIRouter, HTTPException, Query
 
 from app.core.dependencies import CurrentUser, DbSession
 from app.core.exceptions import NotFoundError, ValidationError
-from app.schemas.promotions import (
+from app.packages.catalogo.schemas.promotions import (
     PromotionCreate,
     PromotionPageResponse,
     PromotionRead,

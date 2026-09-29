@@ -6,7 +6,7 @@ from app.core.exceptions import ForbiddenError
 from app.models.catalog import GarmentVariant
 from app.models.sales import Receipt, Sale, SaleDetail
 from app.models.user import Client
-from app.schemas.receipt import ReceiptPageResponse, ReceiptRead
+from app.packages.ventas_pagos_inventario.schemas.receipt import ReceiptPageResponse, ReceiptRead
 from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
 
 router = APIRouter(prefix="/receipts", tags=["receipts"])

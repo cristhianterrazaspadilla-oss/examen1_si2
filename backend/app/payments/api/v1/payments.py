@@ -16,7 +16,7 @@ from app.models.user import Client
 from app.payments.adapters.static_qr_gateway import StaticQRGateway
 from app.payments.domain.service import PaymentService
 from app.payments.factory import get_payment_service
-from app.schemas.payment import PaymentConfirm, PaymentRead
+from app.packages.ventas_pagos_inventario.schemas.payment import PaymentConfirm, PaymentRead
 from app.packages.ventas_pagos_inventario.services.receipt_service import receipt_service
 from app.packages.ventas_pagos_inventario.services.sales_service import sales_service
 from app.packages.ventas_pagos_inventario.services.stock_locking import stock_transaction

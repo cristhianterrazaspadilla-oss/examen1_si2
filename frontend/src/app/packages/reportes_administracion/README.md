@@ -6,6 +6,10 @@ CU-33 a CU-35 · Plataforma: web.
 
 Estado físico: implementación de reportes trasladada a esta carpeta en la etapa 1.
 
+**Ubicación del código:** La pantalla de reportes enlazada está físicamente en este paquete; el registro de rutas permanece en `features/admin/`. Cada sección CU indica la pantalla, servicio, ruta o prueba localizada, o señala cuando no hay implementación propia.
+
+**Recorrido entre plataformas:** [backend](../../../../../backend/app/packages/reportes_administracion/README.md) · [móvil](../../../../../mobile/lib/packages/reportes_administracion/README.md). El README backend muestra `api/` → `services/` → `schemas/` → modelos ORM compartidos en `app/models/`.
+
 Los enlaces apuntan a archivos reales. La presencia de código o pruebas no significa que se hayan ejecutado ni que el CU esté completo. Un archivo enlazado desde varios CU es compartido y no está duplicado.
 
 ## Casos de uso

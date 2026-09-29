@@ -4,8 +4,8 @@ from uuid import UUID
 from pydantic import BaseModel, Field, model_validator
 
 from app.schemas.common import ORMModel
-from app.schemas.payment import PaymentRead
-from app.schemas.sale import SaleRead
+from app.packages.ventas_pagos_inventario.schemas.payment import PaymentRead
+from app.packages.ventas_pagos_inventario.schemas.sale import SaleRead
 
 
 class CartItemIn(BaseModel):

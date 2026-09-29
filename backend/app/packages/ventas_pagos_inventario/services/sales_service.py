@@ -7,7 +7,7 @@ from app.core.exceptions import ConflictError, NotFoundError, ValidationError
 from app.models.inventory import Inventory
 from app.models.reservation import Reservation, ReservationHistory, ReservationStatus
 from app.models.sales import Sale, SaleDetail, SaleStatus
-from app.schemas.sale import SaleGenerate
+from app.packages.ventas_pagos_inventario.schemas.sale import SaleGenerate
 from app.packages.autenticacion_usuarios.services.notification_service import notification_service
 from app.packages.reservas_compra.services.reservation_service import reservation_service
 from app.packages.ventas_pagos_inventario.services.stock_locking import lock_stock, stock_transaction

@@ -19,8 +19,8 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import Session
 
-from app.api.v1.routes_cart import router as cart_router
-from app.api.v1.routes_sales import router as sales_router
+from app.packages.reservas_compra.api.routes_cart import router as cart_router
+from app.packages.ventas_pagos_inventario.api.routes_sales import router as sales_router
 from app.core.database import Base, get_db
 from app.core.exceptions import AppError
 from app.core.security import create_access_token

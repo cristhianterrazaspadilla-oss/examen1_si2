@@ -3,7 +3,7 @@ from fastapi import APIRouter, Query
 from app.core.dependencies import CurrentUser, DbSession
 from app.core.exceptions import ForbiddenError, NotFoundError
 from app.models.analytics import Notification
-from app.schemas.notification import NotificationRead
+from app.packages.autenticacion_usuarios.schemas.notification import NotificationRead
 
 router = APIRouter(prefix="/notifications", tags=["notifications"])
 

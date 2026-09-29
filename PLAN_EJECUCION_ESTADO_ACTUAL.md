@@ -133,7 +133,7 @@ Backend: `https://fashionstore-api-r4me.onrender.com` (health OK) · Frontend: `
 - `frontend/src/app/features/admin/admin-products.component.ts` — referencia de polish completo (5 componentes shared/ui).
 - `frontend/src/app/shared/ui/tabs/tabs.component.ts` — usa `output<string>()`; NO usar `TabKey` (no existe tal tipo; el plan lo sugería erróneamente).
 - `mobile/lib/core/animation/app_animations.dart` — ya creado (UNTRACKED).
-- `backend/app/api/v1/routes_promotions.py` + `promotion_service.py` — API promociones modificada sin commitear.
+- `backend/app/packages/catalogo/api/routes_promotions.py` + `promotion_service.py` — API promociones modificada sin commitear.
 - `PLAN_EJECUCION_POLISH_E2E.md` — plan maestro (Fases 0-5, 14 pantallas web, 18+1 mobile, E2E 34 CUs).
 ---
 

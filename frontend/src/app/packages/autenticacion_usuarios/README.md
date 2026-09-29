@@ -6,6 +6,10 @@ CU-01 a CU-05 · Plataforma: web.
 
 Estado físico: carpeta de navegación. El código localizado conserva sus ubicaciones actuales; este paquete no se ha trasladado en esta etapa.
 
+**Ubicación del código:** Este README es un índice: las pantallas y demás archivos enlazados permanecen en `features/`, `core/` o `shared/`, según cada enlace. Cada sección CU indica la pantalla, servicio, ruta o prueba localizada, o señala cuando no hay implementación propia.
+
+**Recorrido entre plataformas:** [backend](../../../../../backend/app/packages/autenticacion_usuarios/README.md) · [móvil](../../../../../mobile/lib/packages/autenticacion_usuarios/README.md). El README backend muestra `api/` → `services/` → `schemas/` → modelos ORM compartidos en `app/models/`.
+
 Los enlaces apuntan a archivos reales. La presencia de código o pruebas no significa que se hayan ejecutado ni que el CU esté completo. Un archivo enlazado desde varios CU es compartido y no está duplicado.
 
 ## Casos de uso

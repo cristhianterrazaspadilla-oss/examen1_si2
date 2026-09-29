@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 
 from app.core.dependencies import DbSession, require_roles
 from app.models.catalog import Garment
-from app.schemas.product import GarmentCreate, GarmentRead, GarmentUpdate, VariantRead
+from app.packages.catalogo.schemas.product import GarmentCreate, GarmentRead, GarmentUpdate, VariantRead
 from app.packages.catalogo.services.product_service import product_service
 
 router = APIRouter(prefix="/products", tags=["products"])

@@ -456,7 +456,7 @@ class TestCU25PaymentStaticQR:
 
     def test_payment_init_request_schema(self):
         """Test PaymentInitRequest schema validation."""
-        from app.schemas.payment import PaymentInitRequest
+        from app.packages.ventas_pagos_inventario.schemas.payment import PaymentInitRequest
 
         # Valid request
         req = PaymentInitRequest(sale_id=1, method="static_qr")
@@ -471,7 +471,7 @@ class TestCU25PaymentStaticQR:
         """Test PaymentInitResponse schema."""
         from datetime import UTC, datetime
 
-        from app.schemas.payment import PaymentInitResponse
+        from app.packages.ventas_pagos_inventario.schemas.payment import PaymentInitResponse
 
         resp = PaymentInitResponse(
             reference="QR_FS_TEST123",

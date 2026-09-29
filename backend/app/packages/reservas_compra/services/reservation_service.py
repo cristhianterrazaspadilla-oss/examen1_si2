@@ -12,7 +12,7 @@ from app.models.reservation import (
     ReservationHistory,
     ReservationStatus,
 )
-from app.schemas.reservation import ReservationCreate
+from app.packages.reservas_compra.schemas.reservation import ReservationCreate
 from app.packages.autenticacion_usuarios.services.notification_service import notification_service
 from app.packages.ventas_pagos_inventario.services.stock_locking import lock_stock, stock_transaction
 

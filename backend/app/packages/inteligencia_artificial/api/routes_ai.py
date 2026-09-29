@@ -5,7 +5,7 @@ from app.core.dependencies import CurrentUser, DbSession
 from app.core.exceptions import NotFoundError
 from app.models.catalog import GarmentVariant
 from app.models.user import Client, User
-from app.schemas.ai import (
+from app.packages.inteligencia_artificial.schemas.ai import (
     AIChatRequest,
     AIChatResponse,
     AIReportRequest,

@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 
 from app.core.exceptions import ConflictError, NotFoundError, ValidationError
 from app.models.catalog import Category, Collection, Color, Garment, GarmentVariant, Size
-from app.schemas.product import GarmentCreate, GarmentUpdate
+from app.packages.catalogo.schemas.product import GarmentCreate, GarmentUpdate
 
 
 class ProductService:

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Query
 
 from app.core.dependencies import DbSession
-from app.schemas.catalog import (
+from app.packages.catalogo.schemas.catalog import (
     ArConfigRead,
     ArVariantRead,
     BranchAvailabilityRead,

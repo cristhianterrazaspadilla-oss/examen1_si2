@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException, Query
 
 from app.core.dependencies import CurrentUser, DbSession
 from app.models.user import Client
-from app.schemas.history import PurchaseHistoryResponse
+from app.packages.reservas_compra.schemas.history import PurchaseHistoryResponse
 from app.packages.reservas_compra.services.history_service import history_service
 
 router = APIRouter(prefix="/history", tags=["history"])

@@ -8,10 +8,10 @@ from app.core.exceptions import NotFoundError, ValidationError
 from app.models.sales import Payment, Sale
 from app.models.user import Client
 from app.payments.factory import get_payment_service
-from app.schemas.cart import CartCheckout, CartItemIn, CartPurchase, CartRead, PurchaseResponse
-from app.schemas.payment import PaymentRead
-from app.schemas.reservation import ReservationCreate, ReservationItem, ReservationRead
-from app.schemas.sale import SaleGenerate, SaleItem, SaleRead
+from app.packages.reservas_compra.schemas.cart import CartCheckout, CartItemIn, CartPurchase, CartRead, PurchaseResponse
+from app.packages.ventas_pagos_inventario.schemas.payment import PaymentRead
+from app.packages.reservas_compra.schemas.reservation import ReservationCreate, ReservationItem, ReservationRead
+from app.packages.ventas_pagos_inventario.schemas.sale import SaleGenerate, SaleItem, SaleRead
 from app.packages.reservas_compra.services.cart_service import cart_service
 from app.packages.reservas_compra.services.reservation_service import reservation_service
 from app.packages.ventas_pagos_inventario.services.sales_service import sales_service

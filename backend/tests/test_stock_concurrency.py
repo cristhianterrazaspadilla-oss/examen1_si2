@@ -30,11 +30,11 @@ from app.models.reservation import Reservation
 from app.models.sales import Payment, Receipt, Sale
 from app.models.user import Employee, Supplier
 from app.payments.api.v1.payments import confirm_payment
-from app.schemas.inventory import InventoryAdjust
-from app.schemas.payment import PaymentConfirm
-from app.schemas.reception import ReceptionCreate
-from app.schemas.reservation import ReservationCreate
-from app.schemas.sale import SaleGenerate
+from app.packages.ventas_pagos_inventario.schemas.inventory import InventoryAdjust
+from app.packages.ventas_pagos_inventario.schemas.payment import PaymentConfirm
+from app.packages.ventas_pagos_inventario.schemas.reception import ReceptionCreate
+from app.packages.reservas_compra.schemas.reservation import ReservationCreate
+from app.packages.ventas_pagos_inventario.schemas.sale import SaleGenerate
 from app.packages.ventas_pagos_inventario.services.inventory_service import inventory_service
 from app.packages.ventas_pagos_inventario.services.reception_service import reception_service
 from app.packages.reservas_compra.services.reservation_service import reservation_service

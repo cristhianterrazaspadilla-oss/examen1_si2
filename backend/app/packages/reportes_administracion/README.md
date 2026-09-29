@@ -6,6 +6,10 @@ CU-33 a CU-35 · Plataforma: backend.
 
 Estado físico: implementación de reportes trasladada a esta carpeta en la etapa 1.
 
+**Recorrido del CU:** abra su sección abajo y siga `api/` → `services/` → `schemas/` → `app/models/` mediante los enlaces de Rutas/controladores, Servicios, Esquemas y Modelos compartidos. Estas capas existen; un CU puede compartir archivos o no tener una capa propia. Los modelos ORM reales y compartidos permanecen en `app/models/` para evitar duplicarlos o romper sus relaciones. `app/services/__init__.py` se conserva como compatibilidad de paquete; la lógica de servicios actual está en `app/packages/*/services/`.
+
+**Otras plataformas:** [web](../../../../frontend/src/app/packages/reportes_administracion/README.md) · [móvil](../../../../mobile/lib/packages/reportes_administracion/README.md).
+
 Los enlaces apuntan a archivos reales. La presencia de código o pruebas no significa que se hayan ejecutado ni que el CU esté completo. Un archivo enlazado desde varios CU es compartido y no está duplicado.
 
 ## Casos de uso

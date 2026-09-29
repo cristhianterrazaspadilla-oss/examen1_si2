@@ -9,9 +9,9 @@
 
 | Capa | Archivos a modificar/crear |
 |------|---------------------------|
-| **Schemas** | `backend/app/schemas/product.py` — añadir `GarmentUpdate` |
+| **Schemas** | `backend/app/packages/catalogo/schemas/product.py` — añadir `GarmentUpdate` |
 | **Service** | `backend/app/packages/catalogo/services/product_service.py` — `update()`, `delete()` |
-| **Routes** | `backend/app/api/v1/routes_products.py` — `GET /products` (admin), `PATCH`, `DELETE` |
+| **Routes** | `backend/app/packages/catalogo/api/routes_products.py` — `GET /products` (admin), `PATCH`, `DELETE` |
 | **Tests** | `backend/tests/test_products.py` (nuevo) — 10 tests |
 | **Frontend Admin** | `frontend/src/app/features/admin/admin.component.ts` — sección Productos (crear, listar, editar, desactivar) |
 
@@ -19,7 +19,7 @@
 
 ## 🔧 Detalle de Implementación
 
-### 1. Schemas (`backend/app/schemas/product.py`)
+### 1. Schemas (`backend/app/packages/catalogo/schemas/product.py`)
 
 **Añadir al final del archivo:**
 
@@ -67,7 +67,7 @@ def delete(self, db: Session, garment_id: int) -> None:
 
 ---
 
-### 3. Routes (`backend/app/api/v1/routes_products.py`)
+### 3. Routes (`backend/app/packages/catalogo/api/routes_products.py`)
 
 **Reemplazar contenido completo por:**
 
@@ -77,7 +77,7 @@ from fastapi import APIRouter, Depends
 from app.core.dependencies import DbSession, require_roles
 from app.core.exceptions import NotFoundError, ValidationError
 from app.models.catalog import Garment
-from app.schemas.product import GarmentCreate, GarmentRead, GarmentUpdate, VariantRead
+from app.packages.catalogo.schemas.product import GarmentCreate, GarmentRead, GarmentUpdate, VariantRead
 from app.packages.catalogo.services.product_service import product_service
 
 router = APIRouter(prefix="/products", tags=["products"])
@@ -451,9 +451,9 @@ toggleActive(p: any): void {
 
 ## 📋 Orden de Ejecución Recomendado
 
-1. `backend/app/schemas/product.py` — añadir `GarmentUpdate`
+1. `backend/app/packages/catalogo/schemas/product.py` — añadir `GarmentUpdate`
 2. `backend/app/packages/catalogo/services/product_service.py` — `update()`, `delete()`
-3. `backend/app/api/v1/routes_products.py` — 3 endpoints nuevos + imports
+3. `backend/app/packages/catalogo/api/routes_products.py` — 3 endpoints nuevos + imports
 4. `backend/tests/test_products.py` — crear archivo con 10 tests
 5. `frontend/src/app/features/admin/admin.component.ts` — sección Productos completa
 6. **Verificación**: tests + build + prueba manual

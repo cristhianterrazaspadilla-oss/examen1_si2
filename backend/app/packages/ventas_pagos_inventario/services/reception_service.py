@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.core.exceptions import NotFoundError
 from app.models.movement import Reception, ReceptionDetail
-from app.schemas.reception import ReceptionCreate
+from app.packages.ventas_pagos_inventario.schemas.reception import ReceptionCreate
 from app.packages.ventas_pagos_inventario.services.stock_locking import lock_stock, stock_transaction
 
 

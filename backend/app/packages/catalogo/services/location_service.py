@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session, joinedload
 
 from app.core.exceptions import ConflictError, NotFoundError
 from app.models.user import Branch, City
-from app.schemas.location import BranchCreate, BranchUpdate, CityCreate, CityUpdate
+from app.packages.catalogo.schemas.location import BranchCreate, BranchUpdate, CityCreate, CityUpdate
 
 
 class LocationService:
